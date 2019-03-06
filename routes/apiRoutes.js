@@ -17,7 +17,7 @@ module.exports = function (app) {
       .then(function (dbExample) {
         res.json(dbExample);
       });
-  });p
+  });
 
   // Delete an example by id
   app.delete("/api/examples/:id", function (req, res) {
