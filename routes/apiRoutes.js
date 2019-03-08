@@ -1,8 +1,8 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  // Get all Searchs
-  app.get("/api/Searchs", function (req, res) {
+  // Get all Searches
+  app.get("/api/Searches", function (req, res) {
     db.
       findAll({})
       .then(function (dbSearch) {
@@ -11,7 +11,7 @@ module.exports = function (app) {
   });
 
   // Create a new Search
-  app.post("/api/Searchs", function (req, res) {
+  app.post("/api/Searches", function (req, res) {
     db.Search
       .create(req.body)
       .then(function (dbSearch) {
@@ -20,7 +20,7 @@ module.exports = function (app) {
   });
 
   // Delete an Search by id
-  app.delete("/api/Searchs/:id", function (req, res) {
+  app.delete("/api/Searches/:id", function (req, res) {
     db.Search
       .destroy({
         where: {
