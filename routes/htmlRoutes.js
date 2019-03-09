@@ -3,26 +3,26 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
+    db.Search.findAll({}).then(function (dbSearches) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        searches: dbSearches
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
+  // Load Search page and pass in a Search by id
+  app.get("/Search/:id", function (req, res) {
     db
-      .Example
+      .search
       .findOne({
         where: {
           id: req.params.id
         }
       })
-      .then(function (dbExample) {
-        res.render("example", {
-          example: dbExample
+      .then(function (dbSearch) {
+        res.render("Search", {
+          search: dbSearch
         });
       });
   });
