@@ -2,33 +2,33 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Get all Searches
-  app.get("/api/Searches", function (req, res) {
-    db.
-      findAll({})
-      .then(function (dbSearch) {
-        res.json(dbSearch);
+  app.get("/api/searches", function (req, res) {
+    db.Analysis
+      .findAll({})
+      .then(function (dbsearches) {
+        res.json(dbsearches);
       });
   });
 
-  // Create a new Search
-  app.post("/api/Searches", function (req, res) {
-    db.Search
+  // Create a new searches
+  app.post("/api/searches", function (req, res) {
+    db.Analysis
       .create(req.body)
-      .then(function (dbSearch) {
-        res.json(dbSearch);
+      .then(function (dbsearches) {
+        res.json(dbsearches);
       });
   });
 
-  // Delete an Search by id
-  app.delete("/api/Searches/:id", function (req, res) {
-    db.Search
+  // Delete an searches by id
+  app.delete("/api/searches/:id", function (req, res) {
+    db.Analysis
       .destroy({
         where: {
           id: req.params.id
         }
       })
-      .then(function (dbSearch) {
-        res.json(dbSearch);
+      .then(function (dbsearches) {
+        res.json(dbsearches);
       });
   });
 };
