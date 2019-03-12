@@ -1,6 +1,6 @@
 // Get references to page elements
 var $searchText = $("#search-text");
-var $searchDescription = $("#search-description");
+// var $searchDescription = $("#search-description");
 var $submitBtn = $("#submit");
 var $searchList = $("#search-list");
 
