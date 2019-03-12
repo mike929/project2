@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    db.Analysis.findAll({}).then(function (searches) {
+    db.Search.findAll({}).then(function (searches) {
       res.render("index", {
         msg: "Welcome!",
         search: searches
@@ -13,7 +13,7 @@ module.exports = function (app) {
 
   // Load Search page and pass in a Search by id
   app.get("/search/:id", function (req, res) {
-    db.Analysis
+    db.Search
       .findOne({
         where: {
           id: req.params.id

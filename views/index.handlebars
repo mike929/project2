@@ -17,11 +17,12 @@
         {{!-- TWEETS WILL GO HERE ONCE DATA IS PULLED --}}
         {{!-- THIS CAN BE MOVED TO ANOTHER PAGE OR JUST DROP DOWN FURTHER --}}
         {{!-- LET ME KNOW WHAT YOU GUYS THINK ABOUT WHERE TO PLACE THE DATA --}}
-        <ul id="example-list" class="list-group">
+        <ul id="search-list" class="list-group">
           {{#each search}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="search/{{this.id}}">{{this.text}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
+            {{ log this}}
           </li>
           {{/each}}
         </ul>

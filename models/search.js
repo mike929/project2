@@ -34,14 +34,14 @@ module.exports = function (sequelize, DataTypes) {
     // //     // associations can be defined here
     // //   }
     // },
-    good: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
-    bad: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
+    // good: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: false
+    // },
+    // bad: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: false
+    // },
 
 
   });

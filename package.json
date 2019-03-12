@@ -11,24 +11,24 @@
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "mysql": "^2.16.0",
-    "mysql2": "^1.5.3",
+    "mysql2": "^1.6.5",
     "nodemon": "^1.18.10",
     "request": "^2.88.0",
     "sentiment": "^5.0.1",
-    "sequelize": "^4.38.0",
+    "sequelize": "^4.43.0",
     "twitter": "^1.7.1"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-prettier": "^2.7.0",
     "mocha": "^5.2.0",
-    "prettier": "^1.13.7"
+    "prettier": "^1.16.4"
   }
 }
