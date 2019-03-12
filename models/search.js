@@ -25,15 +25,15 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       type: Sequelize.DATE,
       defaultVlaue: Date.now()
-    }
-
-  }, {
-    timestamps: true,
-    classMethods: {
-      associate: function (models) {
-        // associations can be defined here
-      }
     },
+
+  
+    // timestamps: true
+    // // classMethods: {
+    // //   associate: function (models) {
+    // //     // associations can be defined here
+    // //   }
+    // },
     good: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
