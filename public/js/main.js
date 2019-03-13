@@ -1,3 +1,20 @@
+
+// this block of code was brought in from the old app.js file that has been removed.
+// this js file will hold all static page level javascript.
+$(document).ready(function () {
+
+  // INIT SUBMIT BUTTON
+  $('#submitButton').on('click', function (event) {
+    event.preventDefault();
+    console.log($('#post').val())
+
+
+  });
+});
+
+
+
+
 // Get references to page elements
 var $searchText = $("#search-text");
 // var $searchDescription = $("#search-description");
