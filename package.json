@@ -2,34 +2,23 @@
   "name": "Project2",
   "version": "1.0.0",
   "description": "Project 2",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "lint": "eslint **/*.js --quiet",
-    "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "start": "node ./bin/www"
   },
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2",
+    "hbs": "~4.0.1",
     "mysql": "^2.16.0",
-    "mysql2": "^1.6.5",
     "nodemon": "^1.18.10",
     "request": "^2.88.0",
-    "sentiment": "^5.0.1",
+    "Sentimental": "^1.0.1",
     "sequelize": "^4.43.0",
     "twit": "^2.2.11",
-    "twitter": "^1.7.1"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.2.1",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.7.0",
-    "mocha": "^5.2.0",
-    "prettier": "^1.16.4"
+    "morgan": "~1.9.0",
+    "http-errors": "~1.6.2",
+    "serve-favicon": "^2.5.0"
   }
 }
