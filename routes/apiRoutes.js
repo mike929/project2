@@ -1,13 +1,17 @@
 var db = require("../models");
 
+var streamingTwitterFromWord = require("../twiterApi");
+
 module.exports = function (app) {
   // Get all Searches
-  app.get("/api/searches", function (req, res) {
-    db.Search
-      .findAll({})
-      .then(function (dbsearches) {
-        res.json(dbsearches);
-      });
+  app.post("/api/searches", function (req, res) {
+    console.log(req.body)
+    // db.Search
+    //   .findAll({})
+    //   .then(function (dbsearches) {
+    //     res.json(dbsearches);
+    //   });
+    streamingTwitterFromWord(req.body.userInput)
   });
 
   // Create a new searches

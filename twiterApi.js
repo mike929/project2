@@ -1,20 +1,33 @@
 // Requiring my twitter and config
 var Twitter = require('twitter');
-var config = require("./config");
+// var config = require("./config");
+
+// Requiring my dotenv
+const dotenv = require('dotenv');
+dotenv.config();
+// console.log(`Your port is ${process.env.PORT}`); // 8626
 
 // Stablishing a twitter connection 
-var client = new Twitter(config);
+// var client = new Twitter(config);
+console.log(process.env.TWITTER_CONSUMER_KEY)
+// Stablishing a twitter connection 
+var client = new Twitter({
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+});
 
-//Custom Word Submit Wrapper Function
-function customWordSearch() {
-    collectedResults = {
-        error: 0
-    };
-    collectedResults.word = $("#post").val().trim()
-    // collectedResults.word = "Donald Trump"
-    // getImageFromWord()
-    streamingTwitterFromWord(collectedResults.word)
-};
+// //Custom Word Submit Wrapper Function
+// function customWordSearch(value) {
+//     collectedResults = {
+//         error: 0
+//     };
+//     // collectedResults.word = $("#post").val().trim()
+//     // collectedResults.word = "Donald Trump"
+//     // getImageFromWord()
+//     streamingTwitterFromWord(value)
+// };
 
 // This function will search the twits based in the user input
 function getTwitterFromWord (word) {
@@ -49,7 +62,7 @@ client.stream('statuses/filter', {track: word}, function(stream) {
     });
 };
 
-
+// streamingTwitterFromWord();
 // customWordSearch();
 
-module.exports = customWordSearch;
+module.exports = streamingTwitterFromWord;

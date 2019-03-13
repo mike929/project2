@@ -1,5 +1,12 @@
- // INIT SUBMIT BUTTON
+
+
+
+// INIT SUBMIT BUTTON
+
+
   $('#submitButton').on('click', function (event) {
     event.preventDefault();
-    console.log("ive been clicked")
+    var inputValue = $('#post').val();
+    console.log(inputValue)
+    $.post("/api/searches", {userInput: inputValue})
   });
