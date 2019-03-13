@@ -9,4 +9,5 @@
     var inputValue = $('#post').val();
     console.log(inputValue)
     $.post("/api/searches", {userInput: inputValue})
+
   });
