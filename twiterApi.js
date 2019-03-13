@@ -10,8 +10,8 @@ function customWordSearch() {
     collectedResults = {
         error: 0
     };
-    // collectedResults.word = $("#userWord-input").val().trim()
-    collectedResults.word = "Donald Trump"
+    collectedResults.word = $("#post").val().trim()
+    // collectedResults.word = "Donald Trump"
     // getImageFromWord()
     streamingTwitterFromWord(collectedResults.word)
 };
@@ -50,4 +50,6 @@ client.stream('statuses/filter', {track: word}, function(stream) {
 };
 
 
-customWordSearch();
+// customWordSearch();
+
+module.exports = customWordSearch;

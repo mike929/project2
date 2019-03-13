@@ -1,5 +1,7 @@
 var db = require("../models");
 
+var customWordSearch = require("../twiterApi");
+
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
@@ -26,8 +28,13 @@ module.exports = function (app) {
       });
   });
 
+  app.get("/POST?",  function (req, res) {
+    customWordSearch();
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
   });
 };
+

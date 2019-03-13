@@ -63,7 +63,7 @@ var refreshSearches = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-
+  console.log("clicked")
   var search = {
     searchTerm: $searchText.val().trim(),
     // description: $searchDescription.val().trim()

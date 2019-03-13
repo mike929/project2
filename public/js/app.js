@@ -1,8 +1,5 @@
-$(document).ready(function () {
-
-  // INIT SUBMIT BUTTON
+ // INIT SUBMIT BUTTON
   $('#submitButton').on('click', function (event) {
-    console.log("ive been clicked")
     event.preventDefault();
+    console.log("ive been clicked")
   });
-});

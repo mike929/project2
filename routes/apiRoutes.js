@@ -19,6 +19,8 @@ module.exports = function (app) {
       });
   });
 
+
+
   // Delete an searches by id
   app.delete("/api/searches/:id", function (req, res) {
     db.Search
