@@ -1,3 +1,126 @@
+# -------------------------------------------------------------------
+# JJ's .gitignore 
+# 
+# stolen from Casey
+#
+# This file specifies intentionally untracked files to ignore.
+# http://git-scm.com/docs/gitignore
+#
+# Notes:
+# To ignore uncommitted changes in a file that is already tracked,
+# use: `$ git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use: `$ git rm --cached`
+#
+# Change log:
+# 2016-11-01 Ignore babel and webpack build caches
+# 2015-11-16 Add .editorconfig as a tracked file
+# 2014-01-05 Ignore database, compiled, and packaged files
+# 2013-04-11 Header information updated
+# 2012-05-04 Add WordPress specifics to track and ignore
+# 2012-05-01 Initial creation
+#
+# -------------------------------------------------------------------
+
+# Node
+# -------------------------------------------------------------------
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+# Deployed apps should consider commenting this line out:
+# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules
+package-lock.json
+
+# Unit testing
+# -------------------------------------------------------------------
+
+# Testing config
+phpunit.xml
+
+# General
+# -------------------------------------------------------------------
+
+# Track project documentation files
+!README.md
+!CHANGELOG.md
+!CONTRIBUTING.md
+
+# Ignore all files starting with . or ~
+.*
+~*
+
+# Track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# Track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# Ignore editor files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore build caches
+.babel-cache
+.sass-cache
+.webpack-cache
+
+# Ignore OS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Ignore log files
+logs
+*.log
+*.sql
+*.sqlite
+
+# Ignore databases
+*.sql
+*.sqlite
+
+# Ignore compiled files
+*.class
+*.com
+*.o
+*.sass-cache
+*.so
+
+# Ignore packaged files
+*.7z
+*.dll
+*.dmg
+*.exe
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+
 # Logs
 logs
 *.log
