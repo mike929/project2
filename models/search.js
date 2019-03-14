@@ -26,6 +26,9 @@ module.exports = function (sequelize, DataTypes) {
       type: Sequelize.DATE,
       defaultVlaue: Date.now()
     },
+    score: {
+      type: DataTypes.INTEGER,
+    }
 
   
     // timestamps: true
