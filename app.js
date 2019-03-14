@@ -5,6 +5,9 @@ let createError = require('http-errors'),
     logger = require('morgan'),
     twittiment = require('./routes/index'),
     http = require('http');
+    db = require("./models");
+    sequelize = require('sequelize');
+
    
 
 // initialize express
@@ -43,10 +46,32 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// start the server
-http.createServer(app).listen(app.get('PORT'), function(){
+
+var syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
+
+// Starting the server, syncing our models ------------------------------------/
+db.sequelize.sync(syncOptions).then(function() {
+  http.createServer(app).listen(app.get('PORT'), function(){
   console.log(`Server listening on port ${app.get('PORT')}`);
+});
 });
 
 
-module.exports = app;
+
+
+
+db.sequelize = sequelize;
+// db.Sequelize = Sequelize;
+
+module.exports = 
+app;
+db;
+
+

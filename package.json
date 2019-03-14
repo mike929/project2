@@ -8,17 +8,18 @@
   },
   "license": "ISC",
   "dependencies": {
+    "Sentimental": "^1.0.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
     "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
     "nodemon": "^1.18.10",
     "request": "^2.88.0",
-    "Sentimental": "^1.0.1",
     "sequelize": "^4.43.0",
-    "twit": "^2.2.11",
-    "morgan": "~1.9.0",
-    "http-errors": "~1.6.2",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "twit": "^2.2.11"
   }
 }
