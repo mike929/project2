@@ -9,14 +9,14 @@ let createError = require('http-errors'),
     sequelize = require('sequelize');
 
    
-
-// initialize express
-let app = express();
-
+    // initialize express
+    let app = express();
+    const PORT = process.env.PORT || 3000;
+    
 // setup handlebars and set port
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.set('PORT', process.env.PORT || 3000);
+app.set('PORT', PORT);
 
 // setup logging
 app.use(logger('dev'));
@@ -58,8 +58,8 @@ if (process.env.NODE_ENV === "test") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-  http.createServer(app).listen(app.get('PORT'), function(){
-  console.log(`Server listening on port ${app.get('PORT')}`);
+  http.createServer(app).listen(PORT, function(){
+  console.log(`Server listening on port ${PORT}`);
 });
 });
 
