@@ -55,7 +55,7 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
-app.listen(app.get('PORT'), function(){
+app.listen(process.env.PORT, function(){
   console.log(`Server listening on port ${app.get('PORT')}`);
 });
 // Starting the server, syncing our models ------------------------------------/
