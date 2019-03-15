@@ -3,13 +3,28 @@
 // this js file will hold all static page level javascript.
 $(document).ready(function () {
 
-  // INIT SUBMIT BUTTON
-  $('#submitButton').on('click', function (event) {
-    event.preventDefault();
-    console.log($('#post').val())
+//   // INIT SUBMIT BUTTON
+//   $('#submitButton').on('click', function (event) {
+//     event.preventDefault();
+//     console.log($('#post').val())
 
+//   });
+// });
+
+
+// INIT SUBMIT BUTTON (this is the version in Oscar file)
+     
+$('#submitButton').on('click', function (event) {
+  event.preventDefault();
+  var inputValue = $('#post').val();
+  console.log(inputValue)
+  // $.post('/search', {
+  //   userInput: inputValue
+  // })
   });
 });
+
+
 
 // $(".slideInUp").click(function () {
 //   $("h1").hide();
