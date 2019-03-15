@@ -8,11 +8,12 @@ $(document).ready(function () {
     event.preventDefault();
     console.log($('#post').val())
 
-
   });
 });
 
-
+// $(".slideInUp").click(function () {
+//   $("h1").hide();
+// });
 
 
 // Get references to page elements

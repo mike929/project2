@@ -1,4 +1,4 @@
-.list-group-item {
+/* .list-group-item {
   line-height: 2.5;
 }
 
@@ -62,4 +62,109 @@ main h2, h3 {
 
 .mainpanel {
   margin: 50px;
+} */
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+body {
+  background: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#home {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  min-height: 37vh;
+}
+
+header {
+  height: 100px;
+}
+
+header>nav {
+  height: 100%;
+  /* color: #E4E7EA !important; */
+  opacity: 0.6;
+}
+
+.page-footer {
+  opacity: 0.8;
+}
+
+.nav-wrapper {
+  /* opacity: 0.5; */
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+main.container {
+  align-content: center;
+}
+
+main h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+main h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+#submitButton {
+  margin-top: 10px;
+}
+
+#logo-icon {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+#logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  animation-duration: 3s;
+  padding-left: 20px;
+  color: black;
+}
+
+#head-nav-links>li {
+  color: black !important;
+}
+
+#head-nav-links {
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+#mainpanel-content {
+  margin: 70px;
+}
+
+.mainpanel {
+  margin: 50px;
+}
+
+.twitterImage {
+  width: 50px;
+  height: 50px;
+  margin: 20px 15px 20px 20px;
+  padding-right: 20px;
+  animation-duration: 3s;
+}
+
+.gitHubLink {
+  color: black;
 }
