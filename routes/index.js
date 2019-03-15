@@ -1,6 +1,11 @@
+//use .env file
+require('dotenv').config();
+
+
 // require the express things
 var express = require('express');
 var router = express.Router();
+
 
 // require the npm things
 var twit = require('twit');
@@ -29,10 +34,10 @@ router.post('/', function(req, res){
   
   // initialize twit with dev creadentials
   var twitter = new twit({
-    consumer_key: config.consumer_key,
-    consumer_secret: config.consumer_secret,
-    access_token: config.access_token,
-    access_token_secret: config.access_token_secret
+    consumer_key: process.env.consumer_key,
+    consumer_secret: process.env.consumer_secret,
+    access_token: process.env.access_token,
+    access_token_secret: process.env.access_token_secret
   });
   
   // score variable
