@@ -11,6 +11,9 @@
   {{!-- <link rel="stylesheet" href="css/reset.css"> --}}
   {{!-- GOOGLE FONT ICON --}}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {{!-- ANIMATION --}}
+  {{!-- <link rel="stylesheet" href="./animate.min.css"> --}}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   {{!-- MATERIALIZE --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
@@ -25,10 +28,12 @@
   {{!-- NAVBAR --}}
   <header>
     <nav>
-      <div class="nav-wrapper black accent-2">
-        <a href="/" class="brand-logo" id="logo">Project Name Here</a>
+      <div class="nav-wrapper cyan lighten-5">
+            <img class="brand-logo animated bounceInRight twitterImage" src="../img/iconfinder_03-twitter_104501.png"
+          alt="">
+        <a href="/" class="brand-logo animated bounceInRight" id="logo">Twittment</a>
         <ul class="right hide-on-med-and-down" id="head-nav-links">
-          <li><a href="https://github.com/mike929/project2/graphs/contributors">GitHub Repo</a></li>
+          <li><a href="https://github.com/mike929/project2/graphs/contributors" class="black-text" target="_blank">GitHub Repo</a></li>
         </ul>
       </div>
     </nav>
@@ -51,21 +56,21 @@
     </div>
   </main>
   {{!-- FOOTER --}}
-  <footer class="page-footer black accent-2">
+  <footer class="page-footer lime lighten-5">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">| Twitter Sentiment Project 2 |</h5>
-          <p class="grey-text text-lighten-4">something will go here</p>
+          <h5 class="black-text">| Twittment |</h5>
+          <p class="black-text text-lighten-4">Try Social Media Monitoring</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Team</h5>
+          <h5 class="black-text">Team</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/jjisharry">JJ Harry</a>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/mike929">Michael Wilson</a>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/oscarvanegas34">Oscar
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/jjisharry">JJ Harry</a>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/mike929">Michael Wilson</a>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/oscarvanegas34">Oscar
                 Vanegas</a>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/sammysosa23">Sam
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/sammysosa23">Sam
                 Terrazas</a>
             </li>
           </ul>
@@ -88,6 +93,6 @@
 {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
 {{!-- JAVASCRIPT FILE --}}
 {{!-- <script type="text/javascript" src="./public/js/materialize.min.js"></script> --}}
-<script type="text/javascript" src="./js/app.js"></script>
+{{!-- <script type="text/javascript" src="./js/app.js"></script> --}}
 
 </html>
