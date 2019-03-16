@@ -1,26 +1,27 @@
-
 // this block of code was brought in from the old app.js file that has been removed.
 // this js file will hold all static page level javascript.
 $(document).ready(function () {
 
-//   // INIT SUBMIT BUTTON
-//   $('#submitButton').on('click', function (event) {
-//     event.preventDefault();
-//     console.log($('#post').val())
+  //   // INIT SUBMIT BUTTON
+  //   $('#submitButton').on('click', function (event) {
+  //     event.preventDefault();
+  //     console.log($('#post').val())
 
-//   });
-// });
+  //   });
+  // });
 
 
-// INIT SUBMIT BUTTON (this is the version in Oscar file)
-     
-$('#submitButton').on('click', function (event) {
-  event.preventDefault();
-  var inputValue = $('#post').val();
-  console.log(inputValue)
-  // $.post('/search', {
-  //   userInput: inputValue
-  // })
+  // INIT SUBMIT BUTTON (this is the version in Oscar file)
+
+  $('#submitButton').on('click', function (event) {
+    event.preventDefault();
+    var inputValue = $('#post').val();
+    $.post('/', {
+      userInput: inputValue
+    }).done(function(score) {
+      console.log(score)
+      $('#home').text(score)
+    })
   });
 });
 
@@ -39,7 +40,7 @@ var $searchList = $("#search-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveSearch: function(search) {
+  saveSearch: function (search) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -49,13 +50,13 @@ var API = {
       data: JSON.stringify(search)
     });
   },
-  getSearch: function() {
+  getSearch: function () {
     return $.ajax({
       url: "api/searches",
       type: "GET"
     });
   },
-  deleteSearch: function(id) {
+  deleteSearch: function (id) {
     return $.ajax({
       url: "api/searches/" + id,
       type: "DELETE"
@@ -64,9 +65,9 @@ var API = {
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshSearches = function() {
-  API.getSearches().then(function(data) {
-    var $search = data.map(function(search) {
+var refreshSearches = function () {
+  API.getSearches().then(function (data) {
+    var $search = data.map(function (search) {
       var $a = $("<a>")
         .text(search.text)
         .attr("href", "/search/" + search.id);
@@ -94,7 +95,7 @@ var refreshSearches = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var search = {
@@ -107,7 +108,7 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveExample(search).then(function() {
+  API.saveExample(search).then(function () {
     refreshSearches();
   });
 
@@ -117,12 +118,12 @@ var handleFormSubmit = function(event) {
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteSearch(idToDelete).then(function() {
+  API.deleteSearch(idToDelete).then(function () {
     refreshSearches();
   });
 };
