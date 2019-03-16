@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     date: {
       allowNull: false,
-      type: Sequelize.DATE,
+      type: Datatypes.DATE,
       defaultValue: Date.now()
     },
     score: {
