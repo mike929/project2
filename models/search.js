@@ -24,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
     date: {
       allowNull: false,
       type: Sequelize.DATE,
-      defaultVlaue: Date.now()
+      defaultValue: Date.now()
     },
     score: {
       type: DataTypes.INTEGER,

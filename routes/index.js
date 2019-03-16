@@ -48,7 +48,9 @@ router.post('/', function (req, res) {
   let params = {
     // search term
     q: keyword,
-    // since date
+
+    lang: "en",
+      // since date
     since: `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`,
     // # of tweets to get
     count: 20
@@ -61,7 +63,7 @@ router.post('/', function (req, res) {
 
     var tweetArray = []
     for (let i in data.statuses) {
-      // console.log(`Tweet#${i}: ${data.statuses[i].text}`)
+      console.log(`Tweet#${i}: ${data.statuses[i].text}`)
       tweetArray.push(data.statuses[i].text)
       score = performAnalysis(data.statuses)
       // sequelize push data into db
