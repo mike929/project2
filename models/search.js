@@ -21,11 +21,11 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    date: {
-      allowNull: false,
-      type: Sequelize.DATE,
-      defaultVlaue: Date.now()
-    },
+    // date: {
+    //   allowNull: false,
+    //   type: Datatypes.DATE,
+    //   defaultValue: Date.now()
+    // },
     score: {
       type: DataTypes.INTEGER,
     }
