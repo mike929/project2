@@ -11,7 +11,7 @@ var db = {};
 if (config.use_env_variable) {
   // var sequelize = new Sequelize(process.env[config.use_env_variable]);
   // for use when deployed to heroku
-  var sequelize = new Sequelize(process.env.JAWDB_URL);
+  var sequelize = new Sequelize(process.env.JAWDB_URL, {dialect: 'mysql'});
 } else {
   var sequelize = new Sequelize(
     config.database,
