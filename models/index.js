@@ -15,8 +15,8 @@ if (config.use_env_variable) {
 } else {
   var sequelize = new Sequelize(
     process.env.database,
-    process.username,
-    process.password
+    process.env.username,
+    process.env.password
     
   );
 }
