@@ -12,18 +12,64 @@ $(document).ready(function () {
 
 
   // INIT SUBMIT BUTTON (this is the version in Oscar file)
-
   $('#submitButton').on('click', function (event) {
     event.preventDefault();
     var inputValue = $('#post').val();
     $.post('/', {
       userInput: inputValue
-    }).done(function(score) {
+    }).done(function (score) {
       console.log(score)
-      $('#home').text(score)
+      $('#submitButton').hide()
+      // $('#home').text(score)
+      // $('#modal2').text(score)
+      $('#score').text(score)
+      // $('#tweet').text(tweetArray)
+      // $('#keywordTerm').text(keyword)
+
+      // modalTest();     // TESTING - MIGHT NEED TO DELETE
     })
   });
+
+  // FUNCTION - SUBMIT BUTTON CLICK TO OPEN MODAL (Sam's code)
+  $("#submitButton").on('click', function (event) {
+    event.preventDefault();
+    $('#modal2').fadeIn('fast');
+  });
+  // PASS THE MODAL AFTER CLICKING THE SUBMIT BUTTON //
+  // function modalTest() {
+  // };
+
+  // $('#submitButton').on('click', function (event) {
+  //   event.preventDefault();
+  //   var inputValue = $('#post').val();
+  //   $.post('/modal', {
+  //     userInput: inputValue
+  //   }).done(function (score) {
+  //     console.log(score)
+  //     $('#home').text(score)
+  //   })
+  // });
+
+  // MODAL FUNCTION
+  $('.dropdown-button').dropdown({
+    constrainWidth: false,
+    hover: true,
+    belowOrigin: true,
+    alignment: 'left'
+  });
+
+  $('.modal').modal({
+    dismissible: true,
+    inDuration: 300,
+    outDuration: 200,
+    ready: function (modal, trigger) {
+      console.log('Modal Opened', modal, trigger);
+    }
+  });
+
 });
+
+
 
 
 

@@ -11,9 +11,9 @@
   {{!-- <link rel="stylesheet" href="css/reset.css"> --}}
   {{!-- GOOGLE FONT ICON --}}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    {{!-- ANIMATION --}}
+  {{!-- ANIMATION --}}
   {{!-- <link rel="stylesheet" href="./animate.min.css"> --}}
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   {{!-- MATERIALIZE --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
@@ -29,11 +29,12 @@
   <header>
     <nav>
       <div class="nav-wrapper cyan lighten-5">
-            <img class="brand-logo animated bounceInRight twitterImage" src="../img/iconfinder_03-twitter_104501.png"
+        <img class="brand-logo animated bounceInRight twitterImage" src="../img/iconfinder_03-twitter_104501.png"
           alt="">
         <a href="/" class="brand-logo animated bounceInRight" id="logo">Twittment</a>
         <ul class="right hide-on-med-and-down" id="head-nav-links">
-          <li><a href="https://github.com/mike929/project2/graphs/contributors" class="black-text" target="_blank">GitHub Repo</a></li>
+          <li><a href="https://github.com/mike929/project2/graphs/contributors" class="black-text"
+              target="_blank">GitHub Repo</a></li>
         </ul>
       </div>
     </nav>
@@ -84,13 +85,15 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="black-text">| Twittment |</h5>
-          <p class="black-text text-lighten-4">Try Social Media Monitoring</p>
+          <p class="black-text text-lighten-4">Use opinion mining to find out what consumers think of their product,
+            service, brand, marketing campaigns or competitors.</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="black-text">Team</h5>
           <ul>
             <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/jjisharry">JJ Harry</a>
-            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/mike929">Michael Wilson</a>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/mike929">Michael
+                Wilson</a>
             <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/oscarvanegas34">Oscar
                 Vanegas</a>
             <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/sammysosa23">Sam
@@ -100,22 +103,68 @@
         </div> --}}
       </div>
     </div>
+
     {{!-- BOTTOM FOOTER --}}
     <div class="footer-copyright blue-grey darken-4">
       <div class="container">
-        Project Name © 2019
+        Twittment © 2019
         <a class="grey-text text-lighten-4 right" href="#!">
           <i class="material-icons left">keyboard_arrow_up</i> Back To Top
         </a>
       </div>
     </div>
   </footer>
+
+
+      <!-- FIXED FOOTER MODAL TRIGGER -->
+    {{!-- <button id="submitButton" class="btn waves-effect waves-light black">Submit</button> --}}
+    {{!-- LOWER LEFT HAND --}}
+    {{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Search</a> --}}
+
+    <!-- FIXED FOOTER MODAL -->
+    <div id="modal2" class="center modal modal-fixed-footer">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12">
+            <thead>
+              <tr>
+                <th id="searhedTerm">
+                  <h4>Searched Term</h4>
+                </th>
+                <th id="keywordTerm">
+                  <p>Keyword:</p>
+                </th>
+                <hr>
+                <th id="sentimentalTerm">
+                  <h4>Sentimental Score</h4>
+                </th>
+                <th>
+                  <p id="score">score goes here:</p>
+                </th>
+                <hr>
+                <th >
+                  <h4 id="tweet">Tweets:</h4>
+                </th>
+                <th>
+                  <li class="tweetPlacement">tweets goes here</li>
+                </th>
+                <hr>
+              </tr>
+            </thead>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+      </div>
+    </div>
 </body>
 
 {{!-- JQUERY CDN --}}
 {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
 {{!-- JAVASCRIPT FILE --}}
 {{!-- <script type="text/javascript" src="./public/js/materialize.min.js"></script> --}}
+
 <script type="text/javascript" src="./js/main.js" src="./app.js"></script>
 
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>| Project Two |</title>
+  {{!-- JQUERY --}}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  {{!-- FONT AWESOME --}}
+  <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+  {{!-- RESET STYLE SHEET --}}
+  <link rel="stylesheet" href="css/reset.css">
+  {{!-- GOOGLE FONT ICON --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {{!-- MATERIALIZE --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  {{!-- CSS STYLE SHEET --}}
+  <link rel="stylesheet" href=".styles/materialize.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  {{!-- BROWSER OPTIMIZED FOR --}}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  {{!-- NAVBAR --}}
+  <header>
+    <nav>
+      <div class="nav-wrapper black accent-2">
+        <a href="/" class="brand-logo" id="logo">Project Name Here</a>
+        <ul class="right hide-on-med-and-down" id="head-nav-links">
+          <a href="/">Home</a>
+          {{!-- <li><a href="/" target="!#">Home</a></li> --}}
+          <li><a href="https://github.com/mike929/project2" target="_blank">GitHub Repo</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="row">
+    <div class="col s12 m6">
+      <!-- CARD REVEAL -->
+      <div class="card">
+        <div class="card-image waves-effect waves-light waves-block">
+          <img class="activator" src="img/img4.jpg">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator">Card Reveal
+            <i class="material-icons">more_vert</i>
+          </span>
+          <p>
+            <!-- add activator to anything -->
+            <a href="#!" class="activator">Read More</a>
+          </p>
+        </div>
+        <!-- inside of reveal -->
+        <div class="card-reveal">
+          <span class="card-title">Card Title
+            <i class="material-icons">close</i>
+          </span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ad repudiandae sequi at quis assumenda iusto
+            dolor
+            in, maxime earum debitis ea vero aspernatur ipsum, totam iste molestias natus! Ullam?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- JQUERY CDN --}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  {{!-- JAVASCRIPT FILE --}}
+  <script type="text/javascript" src="./public/js/materialize.min.js"></script>
+  <script type="text/javascript" src="./public/js/app.js"></script>
+</body>
+
+</html>
+
+
+{{!-- # export PATH=$HOME/bin:/usr/local/bin:$PATH --}}

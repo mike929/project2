@@ -82,7 +82,11 @@ router.post('/', function (req, res) {
   // send the response back to the server
   setTimeout(function(){
     console.log("ressend: ", score)
-    res.end(JSON.stringify({ 'score': score }))}, 500);
+    res.end(JSON.stringify({ 
+      'score': score,
+      // 'keyword': keyword,
+      // 'tweets': tweetArray
+   }))}, 500);
 });
 
 // function to do the analysis

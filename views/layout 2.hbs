@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>| Project Two |</title>
+  {{!-- JQUERY --}}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  {{!-- FONT AWESOME --}}
+  {{!-- <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script> --}}
+  {{!-- RESET STYLE SHEET --}}
+  {{!-- <link rel="stylesheet" href="css/reset.css"> --}}
+  {{!-- GOOGLE FONT ICON --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {{!-- ANIMATION --}}
+  {{!-- <link rel="stylesheet" href="./animate.min.css"> --}}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  {{!-- MATERIALIZE --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  {{!-- CSS STYLE SHEET --}}
+  {{!-- <link rel="stylesheet" href=".styles/materialize.min.css"> --}}
+  <link rel="stylesheet" href="./styles/styles.css">
+  {{!-- BROWSER OPTIMIZED FOR --}}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  {{!-- NAVBAR --}}
+  <header>
+    <nav>
+      <div class="nav-wrapper cyan lighten-5">
+            <img class="brand-logo animated bounceInRight twitterImage" src="../img/iconfinder_03-twitter_104501.png"
+          alt="">
+        <a href="/" class="brand-logo animated bounceInRight" id="logo">Twittment</a>
+        <ul class="right hide-on-med-and-down" id="head-nav-links">
+          <li><a href="https://github.com/mike929/project2/graphs/contributors" class="black-text" target="_blank">GitHub Repo</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  {{!-- MAIN CONTAINER --}}
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 z-depth-5 mainpanel">
+          <div id="mainpanel-content">
+            <h1>Search Twitter</h1>
+            <div class="divider"></div>
+
+            {{{body}}}
+
+            <a href="/">← Back To Home</a>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {{!-- FOOTER --}}
+  <footer class="page-footer lime lighten-5">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="black-text">| Twittment |</h5>
+          <p class="black-text text-lighten-4">Try Our Social Media Monitoring</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="black-text">Team</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/jjisharry">JJ Harry</a>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/mike929">Michael Wilson</a>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/oscarvanegas34">Oscar
+                Vanegas</a>
+            <li><a class="black-text text-lighten-3" target="_blank" href="https://github.com/sammysosa23">Sam
+                Terrazas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {{!-- BOTTOM FOOTER --}}
+    <div class="footer-copyright blue-grey darken-4">
+      <div class="container">
+        Project Name © 2019
+        <a class="grey-text text-lighten-4 right" href="#!">
+          <i class="material-icons left">keyboard_arrow_up</i> Back To Top
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+{{!-- JQUERY CDN --}}
+{{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
+{{!-- JAVASCRIPT FILE --}}
+{{!-- <script type="text/javascript" src="./public/js/materialize.min.js"></script> --}}
+<script type="text/javascript" src="./js/main.js" src="./app.js"></script>
+
+</html>
