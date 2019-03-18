@@ -8,7 +8,7 @@ var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 
-if (config.use_env_variable) {
+if (process.env.JAWDB_URL) {
   // var sequelize = new Sequelize(process.env);
   // for use when deployed to heroku
   var sequelize = new Sequelize(process.env.JAWDB_URL, {dialect: 'mysql'});
