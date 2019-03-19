@@ -34,40 +34,66 @@ $(document).ready(function () {
   $("#submitButton").on('click', function (event) {
     event.preventDefault();
     $('#modal2').fadeIn('fast');
-  });
-  // PASS THE MODAL AFTER CLICKING THE SUBMIT BUTTON //
-  // function modalTest() {
-  // };
+    $('#submitButton').hide('fast');
 
-  // $('#submitButton').on('click', function (event) {
-  //   event.preventDefault();
-  //   var inputValue = $('#post').val();
-  //   $.post('/modal', {
-  //     userInput: inputValue
-  //   }).done(function (score) {
-  //     console.log(score)
-  //     $('#home').text(score)
-  //   })
-  // });
+    // FUNCTION TO HIDE MODAL ONCE 'OK' IS CLICKED //
+    $('#modalOkButton').on('click', function () {
+      // HIDE MODAL
+      $('#modal2').hide();
+      $('#submitButton').show();
+      // RESET FORM
+      $('#modalOkButton').on('click', function () {
+        $('.form-group').reset();
 
-  // MODAL FUNCTION
-  $('.dropdown-button').dropdown({
-    constrainWidth: false,
-    hover: true,
-    belowOrigin: true,
-    alignment: 'left'
+      });
+    });
   });
 
-  $('.modal').modal({
-    dismissible: true,
-    inDuration: 300,
-    outDuration: 200,
-    ready: function (modal, trigger) {
-      console.log('Modal Opened', modal, trigger);
-    }
-  });
+  // $('hide').modal();
+
+  // $('#modal2').modal(function {
+  //   // FADE IN MODAL 
+  //   $("#fade").modal({
+  //     fadeDuration: 1000,
+  //     fadeDelay: 0.50
+  //   });
 
 });
+
+
+
+// PASS THE MODAL AFTER CLICKING THE SUBMIT BUTTON //
+// function modalTest() {
+// };
+
+// $('#submitButton').on('click', function (event) {
+//   event.preventDefault();
+//   var inputValue = $('#post').val();
+//   $.post('/modal', {
+//     userInput: inputValue
+//   }).done(function (score) {
+//     console.log(score)
+//     $('#home').text(score)
+//   })
+// });
+
+// MODAL FUNCTION
+$('.dropdown-button').dropdown({
+  constrainWidth: false,
+  hover: true,
+  belowOrigin: true,
+  alignment: 'left'
+});
+
+$('.modal').modal({
+  dismissible: true,
+  inDuration: 300,
+  outDuration: 200,
+  ready: function (modal, trigger) {
+    console.log('Modal Opened', modal, trigger);
+  }
+});
+
 
 
 
