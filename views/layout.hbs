@@ -116,54 +116,81 @@
   </footer>
 
 
-      <!-- FIXED FOOTER MODAL TRIGGER -->
-    {{!-- <button id="submitButton" class="btn waves-effect waves-light black">Submit</button> --}}
-    {{!-- LOWER LEFT HAND --}}
-    {{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Search</a> --}}
+  <!-- FIXED FOOTER MODAL TRIGGER -->
+  {{!-- <button id="submitButton" class="btn waves-effect waves-light black">Submit</button> --}}
+  {{!-- LOWER LEFT HAND --}}
+  {{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Search</a> --}}
 
-    <!-- FIXED FOOTER MODAL -->
-    <div id="modal2" class="center modal modal-fixed-footer">
-      <div class="modal-content">
-        <div class="row">
-          <div class="col s12">
-            <thead>
-              <tr>
-                <th id="searhedTerm">
-                  <h4>Searched Term</h4>
-                </th>
-                <th id="keywordTerm">
-                  <p>Keyword:</p>
-                </th>
-                <hr>
-                <th id="sentimentalTerm">
-                  <h4>Sentimental Score</h4>
-                </th>
-                <th>
-                  <p id="score">score goes here:</p>
-                </th>
-                <hr>
-                <th >
-                  <h4 id="tweet">Tweets:</h4>
-                </th>
-                <th>
-                  <li class="tweetPlacement">tweets goes here</li>
-                </th>
-                <hr>
-              </tr>
-            </thead>
-          </div>
+  <!-- FIXED FOOTER MODAL -->
+  <div id="modal2" class="center modal modal-fixed-footer">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12">
+          <thead>
+            <tr>
+              <th id="searhedTerm">
+                <h4>Searched Term</h4>
+              </th>
+              <th id="keywordTerm">
+                <p>Keyword:</p>
+              </th>
+              <hr>
+              <th id="sentimentalTerm">
+                <h4>Sentimental Score</h4>
+              </th>
+              <th>
+                <p id="score">score goes here:</p>
+              </th>
+              <hr>
+              <th>
+                <h4 id="tweet">Tweets:</h4>
+              </th>
+              <th>
+                <li class="tweetPlacement">tweets goes here</li>
+              </th>
+              <hr>
+            </tr>
+          </thead>
         </div>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-      </div>
     </div>
+    <div class="modal-footer">
+      <a href="#!" id="modalOkButton" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    </div>
+  </div>
 </body>
 
 {{!-- JQUERY CDN --}}
 {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
 {{!-- JAVASCRIPT FILE --}}
 {{!-- <script type="text/javascript" src="./public/js/materialize.min.js"></script> --}}
+<<<<<<< HEAD
+<script type="text/javascript" src="./js/main.js" src="/app.js"></script>
+
+
+{{!-- <script>
+  $(document).ready(function () {
+
+    $('.dropdown-button').dropdown({
+      constrainWidth: false,
+      hover: true,
+      belowOrigin: true,
+      alignment: 'left'
+    });
+
+    // JAVASCRIPT START HERE //
+    $('.modal').modal({
+      dismissible: true,
+      inDuration: 300,
+      outDuration: 200,
+      ready: function (modal, trigger) {
+        console.log('Modal Opened', modal, trigger);
+      }
+    });
+
+
+=======
+>>>>>>> master
 
 <script type="text/javascript" src="./js/main.js" src="./app.js"></script>
 
