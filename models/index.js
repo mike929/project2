@@ -7,12 +7,15 @@ var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 // var config = require(__dirname + "/../config/config.json")[env];
 // const env = process.env.NODE_ENV; // 'dev' or 'test'
+
+var db = {};
+
 const sequelize = new Sequelize('analysisdb', 'root', 'password', {
   host: 'localhost',
   dialect: 'mysql'
 });
 
-var db = {};
+// var db = {};
 
 // if (process.env.JAWDB_URL) {
 //   // var sequelize = new Sequelize(process.env);
