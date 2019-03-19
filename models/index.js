@@ -14,18 +14,18 @@ const sequelize = new Sequelize('analysisdb', 'root', 'password', {
 
 var db = {};
 
-if (process.env.JAWDB_URL) {
-  // var sequelize = new Sequelize(process.env);
-  // for use when deployed to heroku
-  var sequelize = new Sequelize(process.env.JAWDB_URL, {dialect: 'mysql'});
-} else {
-  var sequelize = new Sequelize(
-    process.env.database,
-    process.env.username,
-    process.env.password
+// if (process.env.JAWDB_URL) {
+//   // var sequelize = new Sequelize(process.env);
+//   // for use when deployed to heroku
+//   var sequelize = new Sequelize(process.env.JAWDB_URL, {dialect: 'mysql'});
+// } else {
+//   var sequelize = new Sequelize(
+//     process.env.database,
+//     process.env.username,
+//     process.env.password
     
-  );
-}
+//   );
+// }
 
 fs.readdirSync(__dirname)
   .filter(function(file) {
