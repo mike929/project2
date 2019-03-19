@@ -5,19 +5,21 @@ var path = require("path");
 var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
-var config = require(__dirname + "/../config/config.json")[env];
+// var config = require(__dirname + "/../config/config.json")[env];
+// const env = process.env.NODE_ENV; // 'dev' or 'test'
+
 var db = {};
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+if (process.env.JAWDB_URL) {
+  // var sequelize = new Sequelize(process.env);
   // for use when deployed to heroku
-  // var sequelize = new Sequelize(process.env.JAWDB_URL);
+  var sequelize = new Sequelize(process.env.JAWDB_URL, {dialect: 'mysql'});
 } else {
   var sequelize = new Sequelize(
-    config.database,
-    config.username,
-    config.password,
-    config
+    process.env.database,
+    process.env.username,
+    process.env.password
+    
   );
 }
 
